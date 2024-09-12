@@ -8,6 +8,7 @@ More or less channels can be added as you want. You can use the Adafruit GFX lib
 
 - **ESP32 Board (tested on Lolin S2 Mini)**
 - **HUB75 LED Matrix Display** (e.g., 64x32 or 64x64)
+- **Arduino MAX485 Receiver**
 - **ESP DMX Library** https://github.com/someweisguy/esp_dmx
 - **ESP32-HUB75-MatrixPanel-I2S-DMA Library** https://github.com/tidbyt/ESP32-HUB75-MatrixPanel-I2S-DMA
 - **DMX-512 Lighting Controller (or software)**
