@@ -1,3 +1,5 @@
+![My Image](https://github.com/mdethmers/ESP32-DMX-HUB75-controller/blob/main/Images/img1.jpg)
+
 # ESP32 Matrix Panel with DMX Control
 
 This project demonstrates how to use an ESP32 to drive a HUB75 matrix display while receiving DMX signals for controlling various RGB sectors of the display. The project is implemented using the `ESP32-HUB75-MatrixPanel-I2S-DMA` and `esp_dmx` libraries. This sketch uses 2 HUB75 screens, each one having a 64x32 resolution. The sketch was tested and working with a Lolin S2 Mini, coupled with a Arduino MAX485 module. The sketch uses 9 channels for RGB control, brightness control for 4 sections, 1 for sidescrolling movement and 1 for strobing. 
