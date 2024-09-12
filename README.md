@@ -16,6 +16,9 @@ More or less channels can be added as you want. You can use the Adafruit GFX lib
 
 Dependency: You will need to install Adafruit_GFX from the "Library > Manage Libraries" menu.
 
+## Working demo
+Check the demo sketch for a working version of this code; https://github.com/mdethmers/ESP32-DMX-HUB75-controller/blob/main/HUB75DMX_V2.ino
+
 ## Wiring
 
 Make sure to wire the ESP32 to the HUB75 LED Matrix as per the pin definitions in the code. Here's a summary:
