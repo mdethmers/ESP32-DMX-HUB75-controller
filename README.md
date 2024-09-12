@@ -54,15 +54,15 @@ VirtualMatrixPanel  *virtualDisp = nullptr;
 
 Include settings for your DMX receiver and usage
 ```markdown
-const dmx_port_t dmx_num = DMX_NUM_1;
+const int tx_pin = 12; //change
+const int rx_pin = 8; //change
+const int rts_pin = 11; //change
+const dmx_port_t dmx_num = DMX_NUM_1; //use ESP port 1
 dmx_config_t config = DMX_CONFIG_DEFAULT;
 dmx_personality_t personalities[] = {
   {1, "Default Personality"}
 };
 int personality_count = 1;
-const int tx_pin = 12;
-const int rx_pin = 8;//change
-const int rts_pin = 11;
 bool dmxIsConnected = false;
 unsigned long lastUpdate = millis();
 
