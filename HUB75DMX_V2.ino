@@ -29,11 +29,15 @@
 MatrixPanel_I2S_DMA *dma_display = nullptr;
 VirtualMatrixPanel  *virtualDisp = nullptr;
 
-const dmx_port_t dmx_num = DMX_NUM_1;
+const int tx_pin = 12; //change
+const int rx_pin = 8; //change
+const int rts_pin = 11; //change
+const dmx_port_t dmx_num = DMX_NUM_1; //use ESP port 1
 dmx_config_t config = DMX_CONFIG_DEFAULT;
-const int tx_pin = 12;
-const int rx_pin = 8;//change
-const int rts_pin = 11;
+dmx_personality_t personalities[] = {
+  {1, "Default Personality"}
+};
+int personality_count = 1;
 bool dmxIsConnected = false;
 unsigned long lastUpdate = millis();
 
@@ -43,9 +47,9 @@ uint8_t data[size];
 
 
 void setup() {
-  serial.begin(9600);
+  Serial.begin(9600);
 
-  dmx_driver_install(dmx_num, &config, DMX_INTR_FLAGS_DEFAULT);
+  dmx_driver_install(dmx_num, &config, personalities, personality_count);
   dmx_set_pin(dmx_num, tx_pin, rx_pin, rts_pin);
 
   HUB75_I2S_CFG::i2s_pins _pins={R1_PIN, G1_PIN, B1_PIN, R2_PIN, G2_PIN, B2_PIN, A_PIN, B_PIN, C_PIN, D_PIN, E_PIN, LAT_PIN, OE_PIN, CLK_PIN};
